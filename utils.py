@@ -1,4 +1,5 @@
 # coding=utf-8
+import csv
 import hashlib
 import json
 import os
@@ -7,35 +8,42 @@ import time
 import subprocess
 
 import MySQLdb
+import allure
 import requests
+import xlrd
 import xlwt
 from collections import Iterable
 
 
-def get_sign(dict={}):
+def get_sign(args):
     result = []
-    for keys, values in dict.items():
+    for keys, values in args.items():
         # print(values)
+        if not isinstance(values, str):
+            values = str(values)
         result.append(values)
-    # key=6613787ce111640e9b43
-    result.append("6613787ce111640e9b43")
+    result.append("9a93a8b14d664f2e")
     result.sort()
-
+    #print("排序之后的数据：", result)
     result_join = '&'.join(result)
+    #print("拼接之后的数据：", result_join)
 
     m = hashlib.md5(result_join.encode("utf-8"))
+    #print(m.hexdigest())
     return m.hexdigest()
 
-def sendRequest(arg, url):
+
+def sendRequest(arg, url, token=''):
     try:
-        headers = {"content-type": "application/json"}
+        if token == '':
+            headers = {"content-type": "application/json"}
+        else:
+            headers = {"content-type": "application/json", "Authorization": token}
         Start = time.time()
-        # eval 将字符串str当成有效的表达式来求值并返回计算结果。
         r = requests.post(url, data=json.dumps(arg), headers=headers)
         End = time.time()
         diff = End - Start
-        results = r.json()
-        return results, diff
+        return r.content.decode(), diff
     except Exception as e:
         print(e)
 
@@ -95,3 +103,83 @@ def write_excel_data(data, excel, overwrite=False):
     except Exception as e:
         print(e)
         return False
+
+def get_file_data(file):
+    ext = os.path.splitext(file)[1]
+    if ext == ".csv":
+        return get_csv_data(file)
+    elif ext in [".xls", ".xlsx"]:
+        return get_excel_data(file)
+
+
+def get_csv_data(file):
+    if not os.path.isfile(file):
+        print('%s 文件不存在' % file)
+        return False
+    else:
+        print('开始读取数据...', end="")
+    with open(file, "r", encoding="utf-8") as csvfile:
+        rd = csv.reader(csvfile)
+        print("完成")
+        return [l for l in rd]
+
+
+def get_excel_data(excel):
+    if not os.path.isfile(excel):
+        print('%s 文件不存在' % excel)
+        return False
+    else:
+        print('开始读取数据...', end="")
+
+    workbook = xlrd.open_workbook(excel, encoding_override="utf-8")
+    worksheets = workbook.sheets()
+    data = dict()
+    for sheet in worksheets:
+        sheet_data = []
+        for row in range(sheet.nrows):
+            row_data = []
+            for col in range(sheet.ncols):
+                if sheet.cell(row, col).ctype == xlrd.XL_CELL_DATE:
+                    value = xlrd.xldate.xldate_as_datetime(sheet.cell(row, col).value, 0)
+                else:
+                    value = sheet.cell(row, col).value
+                row_data.append(value)
+            sheet_data.append(row_data)
+        data[sheet.name] = sheet_data
+    print('完成')
+    return data
+
+
+@allure.step("生成参数")
+def general_arg(const_arg,param):
+    if "password" in param:
+        m = hashlib.md5(param["password"].encode("utf-8"))
+        param["password"] = m.hexdigest()
+
+    newParam=dict(const_arg,**param)
+    newParam["sign"]=get_sign(newParam)
+
+    return newParam
+
+
+@allure.step("获取{0} case")
+def general_case(tag,all_data):
+    case_list=[]
+    for d in all_data:
+        if d[0]==tag:
+            case_list.append(d[1:])
+
+    return case_list
+
+
+@allure.step("对比结果")
+def compare(ac,ex):
+    actual = eval(ac)
+    expected = eval(ex)
+    if actual["code"]!=expected["code"]:
+        return False
+
+    if "msg" in actual and actual["msg"]!=expected["msg"]:
+        return False
+
+    return True
