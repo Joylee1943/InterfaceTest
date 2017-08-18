@@ -1,0 +1,47 @@
+{
+  "uid" : "562b14ae05ad15be",
+  "name" : "Testlogin.test_onLogin[param1-expected1]",
+  "title" : "Test on login [param1-expected1]",
+  "time" : {
+    "start" : 1502436691273,
+    "stop" : 1502436691326,
+    "duration" : 53
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "AssertionError: assert {'code': 1000...msg': '签名错误！'} == {'code': 11004...msg': '密码错误！'}\n  Differing items:\n  {'data': '签名错误！！'} != {'data': ''}\n  {'code': 10009} != {'code': 11004}\n  {'msg': '签名错误！'} != {'msg': '密码错误！'}\n  Full diff:\n  - {'code': 10009, 'data': '签名错误！！', 'msg': '签名错误！'}\n  ?             ^^           ------           ^^\n  + {'code': 11004, 'data': '', 'msg': '密码错误！'}\n  ?          +   ^                      ^^",
+    "stackTrace" : "self = <test_onLogin.Testlogin object at 0x0000024AB2E88EF0>\nparam = {'account': '13701837591', 'password': 'd41d8cd98f00b204e9800998ecf8427e'}\nexpected = {'code': 11004, 'data': '', 'msg': '密码错误！'}\n\n    @pytest.mark.parametrize(\"param,expected\",login_data)\n    def test_onLogin(self,param,expected):\n        r = sendRequest(param,(path+url).strip())\n        result=r[0]\n>       assert result==expected\nE       AssertionError: assert {'code': 1000...msg': '签名错误！'} == {'code': 11004...msg': '密码错误！'}\nE         Differing items:\nE         {'data': '签名错误！！'} != {'data': ''}\nE         {'code': 10009} != {'code': 11004}\nE         {'msg': '签名错误！'} != {'msg': '密码错误！'}\nE         Full diff:\nE         - {'code': 10009, 'data': '签名错误！！', 'msg': '签名错误！'}\nE         ?             ^^           ------           ^^\nE         + {'code': 11004, 'data': '', 'msg': '密码错误！'}\nE         ?          +   ^                      ^^\n\ntest_onLogin.py:22: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "900fefe6be92bf82",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "18204-MainThread"
+  } ],
+  "parameters" : [ ]
+}

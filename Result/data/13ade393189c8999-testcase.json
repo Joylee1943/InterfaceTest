@@ -1,0 +1,65 @@
+{
+  "uid" : "13ade393189c8999",
+  "name" : "TestRegist.test_Regist[\\u6ce8\\u518c-onRegist.do-{\"account\":\"13701837591\",\"password\":\"a123456\",\"verifyCode\":\"082481\"}-{'code': 10002, 'data': '', 'msg': '\\u9a8c\\u8bc1\\u7801\\u9519\\u8bef\\uff01'}]",
+  "title" : "Test regist [\\u6ce8\\u518c-onRegist.do-{\"account\":\"13701837591\",\"password\":\"a123456\",\"verifyCode\":\"082481\"}-{'code': 10002, 'data': '', 'msg': '\\u9a8c\\u8bc1\\u7801\\u9519\\u8bef\\uff01'}]",
+  "time" : {
+    "start" : 1502789659751,
+    "stop" : 1502789659786,
+    "duration" : 35
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 1
+  },
+  "failure" : {
+    "message" : "TypeError: list indices must be integers or slices, not str",
+    "stackTrace" : "self = <test_onLogin.TestRegist object at 0x000001ED4BE165F8>, tag = '注册'\nurl = 'onRegist.do'\nparam = '{\"account\":\"13701837591\",\"password\":\"a123456\",\"verifyCode\":\"082481\"}'\nexpected = \"{'code': 10002, 'data': '', 'msg': '验证码错误！'}\"\n\n    @pytest.mark.parametrize(\"tag,url,param,expected\",general_case(\"注册\",data))\n    @allure.feature('注册测试')\n    @allure.step(\"测试模块：{0}\")\n    def test_Regist(self,tag,url,param,expected):\n>       newPara=general_arg(constArg,eval(param))\n\ntest_onLogin.py:43: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nconst_arg = {'appID': 'com.shautolinked.vms', 'deviceName': 'iPhone 6s Plus', 'deviceVendor': '美国.苹果', 'osName': 'iOS', ...}\nparam = {'account': '13701837591', 'password': 'a123456', 'verifyCode': '082481'}\n\n    def general_arg(const_arg,param):\n        if \"password\" in param:\n            m = hashlib.md5(param[\"password\"].encode(\"utf-8\"))\n>           data[0][\"password\"] = m.hexdigest()\nE           TypeError: list indices must be integers or slices, not str\n\ntest_onLogin.py:17: TypeError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "1fc9d224cb278e06",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ {
+    "name" : "测试模块：<test_onLogin.TestRegist object at 0x000001ED4BE165F8>",
+    "title" : "测试模块：<test_onLogin.TestRegist object at 0x000001ED4BE165F8>",
+    "time" : {
+      "start" : 1502789659752,
+      "stop" : 1502789659752,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "FAILED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "feature",
+    "value" : "注册测试"
+  }, {
+    "name" : "thread",
+    "value" : "11504-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

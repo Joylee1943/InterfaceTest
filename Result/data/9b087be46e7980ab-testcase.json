@@ -1,0 +1,47 @@
+{
+  "uid" : "9b087be46e7980ab",
+  "name" : "Testlogin.test_onLogin[param1-expected1]",
+  "title" : "Test on login [param1-expected1]",
+  "time" : {
+    "start" : 1502439928351,
+    "stop" : 1502439928601,
+    "duration" : 250
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "AssertionError: assert 11003 == 11004",
+    "stackTrace" : "self = <test_onLogin.Testlogin object at 0x000001D89486FB70>\nparam = {'account': '13701837591', 'password': 'd41d8cd98f00b204e9800998ecf8427e'}\nexpected = {'code': 11004}\n\n    @pytest.mark.parametrize(\"param,expected\",login_data)\n    def test_onLogin(self,param,expected):\n        newPara=dict(constArg,**param)\n        newPara[\"sign\"]=get_sign(newPara)\n        r = sendRequest(newPara,(path+url).strip())\n        result=eval(r[0])\n>       assert result[\"code\"]==expected[\"code\"]\nE       assert 11003 == 11004\n\ntest_onLogin.py:25: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "20167c7498336ab6",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "thread",
+    "value" : "3692-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

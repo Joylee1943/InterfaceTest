@@ -1,0 +1,41 @@
+{
+  "uid" : "4b4d7bcf0f9a4be1",
+  "name" : "Testlogin",
+  "title" : "Testlogin",
+  "time" : {
+    "start" : 1502439665411,
+    "stop" : 1502439665411,
+    "duration" : 0
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "failed",
+    "stackTrace" : "C:\\Python\\Python36\\lib\\site-packages\\_pytest\\runner.py:163: in __init__\n    self.result = func()\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\main.py:476: in _memocollect\n    return self._memoizedcall('_collected', lambda: list(self.collect()))\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\main.py:347: in _memoizedcall\n    res = function()\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\main.py:476: in <lambda>\n    return self._memoizedcall('_collected', lambda: list(self.collect()))\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\python.py:534: in collect\n    return super(Instance, self).collect()\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\python.py:326: in collect\n    res = self.makeitem(name, obj)\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\python.py:338: in makeitem\n    collector=self, name=name, obj=obj)\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\vendored_packages\\pluggy.py:745: in __call__\n    return self._hookexec(self, self._nonwrappers + self._wrappers, kwargs)\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\vendored_packages\\pluggy.py:339: in _hookexec\n    return self._inner_hookexec(hook, methods, kwargs)\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\vendored_packages\\pluggy.py:334: in <lambda>\n    _MultiCall(methods, kwargs, hook.spec_opts).execute()\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\vendored_packages\\pluggy.py:613: in execute\n    return _wrapped_call(hook_impl.function(*args), self.execute)\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\vendored_packages\\pluggy.py:250: in _wrapped_call\n    wrap_controller.send(call_outcome)\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\python.py:197: in pytest_pycollect_makeitem\n    res = list(collector._genfunctions(name, obj))\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\python.py:358: in _genfunctions\n    self.ihook.pytest_generate_tests(metafunc=metafunc)\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\vendored_packages\\pluggy.py:745: in __call__\n    return self._hookexec(self, self._nonwrappers + self._wrappers, kwargs)\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\vendored_packages\\pluggy.py:339: in _hookexec\n    return self._inner_hookexec(hook, methods, kwargs)\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\vendored_packages\\pluggy.py:334: in <lambda>\n    _MultiCall(methods, kwargs, hook.spec_opts).execute()\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\vendored_packages\\pluggy.py:614: in execute\n    res = hook_impl.function(*args)\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\python.py:110: in pytest_generate_tests\n    metafunc.parametrize(*marker.args, **marker.kwargs)\nC:\\Python\\Python36\\lib\\site-packages\\_pytest\\python.py:856: in parametrize\n    assert len(valset) == len(argnames)\nE   AssertionError"
+  },
+  "description" : {
+    "value" : "This is the tests collection phase. Failures are modules that failed to collect.",
+    "type" : "TEXT"
+  },
+  "severity" : "NORMAL",
+  "status" : "BROKEN",
+  "suite" : {
+    "uid" : "2ae08e3c3201a9c1",
+    "name" : "test_collection_phase",
+    "title" : "Collection phase"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-title",
+    "value" : "Collection phase"
+  }, {
+    "name" : "suite-name",
+    "value" : "test_collection_phase"
+  } ],
+  "parameters" : [ ]
+}

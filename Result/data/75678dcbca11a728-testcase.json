@@ -1,0 +1,47 @@
+{
+  "uid" : "75678dcbca11a728",
+  "name" : "Testlogin.test_onLogin[param0-expected0]",
+  "title" : "Test on login [param0-expected0]",
+  "time" : {
+    "start" : 1502436691254,
+    "stop" : 1502436691272,
+    "duration" : 18
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "AssertionError: assert {'code': 1000...msg': '输入错误！'} == {'code': 10001...msg': '参数错误！'}\n  Common items:\n  {'code': 10001, 'data': '参数account错误！'}\n  Differing items:\n  {'msg': '输入错误！'} != {'msg': '参数错误！'}\n  Full diff:\n  - {'code': 10001, 'data': '参数account错误！', 'msg': '输入错误！'}\n  ?                                                 ^^\n  + {'code': 10001, 'data': '参数account错误！', 'msg': '参数错误！'}\n  ?                                                 ^^",
+    "stackTrace" : "self = <test_onLogin.Testlogin object at 0x0000024AB2EB3978>\nparam = {'account': '', 'password': 'd41d8cd98f00b204e9800998ecf8427e'}\nexpected = {'code': 10001, 'data': '参数account错误！', 'msg': '参数错误！'}\n\n    @pytest.mark.parametrize(\"param,expected\",login_data)\n    def test_onLogin(self,param,expected):\n        r = sendRequest(param,(path+url).strip())\n        result=r[0]\n>       assert result==expected\nE       AssertionError: assert {'code': 1000...msg': '输入错误！'} == {'code': 10001...msg': '参数错误！'}\nE         Common items:\nE         {'code': 10001, 'data': '参数account错误！'}\nE         Differing items:\nE         {'msg': '输入错误！'} != {'msg': '参数错误！'}\nE         Full diff:\nE         - {'code': 10001, 'data': '参数account错误！', 'msg': '输入错误！'}\nE         ?                                                 ^^\nE         + {'code': 10001, 'data': '参数account错误！', 'msg': '参数错误！'}\nE         ?                                                 ^^\n\ntest_onLogin.py:22: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "900fefe6be92bf82",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "18204-MainThread"
+  } ],
+  "parameters" : [ ]
+}

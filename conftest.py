@@ -1,7 +1,7 @@
 # coding=utf-8
 import pytest,copy
 from utils import get_db,sendRequest,get_sign,get_file_data,general_arg,general_case,compare
-from config import product,chedunapp,Login_account
+from config import product
 from InterfacePath import interface
 
 

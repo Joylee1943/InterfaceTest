@@ -1,0 +1,44 @@
+{
+  "uid" : "31c3087466399787",
+  "name" : "Testlogin.test_onLogin[param1-expected1]",
+  "title" : "Test on login [param1-expected1]",
+  "time" : {
+    "start" : 1502438181161,
+    "stop" : 1502438181161,
+    "duration" : 0
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "ac8aeb7eea27cd25",
+    "name" : "test_GetVehicleComputer",
+    "title" : "Test get vehicle computer"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "10332-MainThread"
+  }, {
+    "name" : "suite-name",
+    "value" : "test_GetVehicleComputer"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

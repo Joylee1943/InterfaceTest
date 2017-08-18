@@ -1,0 +1,83 @@
+{
+  "uid" : "9158b4f55282847f",
+  "name" : "TestRegist.test_Regist[onRegist.do-{\"account\":\"137018375911\",\"password\":\"a123456\",\"verifyCode\":\"1\"}-{'code': 10005, 'data': '', 'msg': '\\u624b\\u673a\\u53f7\\u9519\\u8bef\\uff01'}]",
+  "title" : "Test regist [onRegist.do-{\"account\":\"137018375911\",\"password\":\"a123456\",\"verifyCode\":\"1\"}-{'code': 10005, 'data': '', 'msg': '\\u624b\\u673a\\u53f7\\u9519\\u8bef\\uff01'}]",
+  "time" : {
+    "start" : 1502862555288,
+    "stop" : 1502862555376,
+    "duration" : 88
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 2
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "b62c824c80aef466",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ {
+    "name" : "生成参数",
+    "title" : "生成参数",
+    "time" : {
+      "start" : 1502862555289,
+      "stop" : 1502862555289,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "对比结果",
+    "title" : "对比结果",
+    "time" : {
+      "start" : 1502862555376,
+      "stop" : 1502862555376,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "用户注册",
+    "url" : "用户注册"
+  } ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "feature",
+    "value" : "注册测试"
+  }, {
+    "name" : "thread",
+    "value" : "11976-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "testId",
+    "value" : "用户注册"
+  } ],
+  "parameters" : [ ]
+}

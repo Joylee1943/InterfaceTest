@@ -1,0 +1,86 @@
+{
+  "uid" : "518825e86a10f0fb",
+  "name" : "TestRegist.test_Regist[onRegist.do-{\"account\":\"\",\"password\":\"a123456\",\"verifyCode\":\"123456\"}-{'code': 10001, 'data': '\\u53c2\\u6570account\\u9519\\u8bef\\uff01', 'msg': '\\u53c2\\u6570\\u9519\\u8bef\\uff01'}]",
+  "title" : "Test regist [onRegist.do-{\"account\":\"\",\"password\":\"a123456\",\"verifyCode\":\"123456\"}-{'code': 10001, 'data': '\\u53c2\\u6570account\\u9519\\u8bef\\uff01', 'msg': '\\u53c2\\u6570\\u9519\\u8bef\\uff01'}]",
+  "time" : {
+    "start" : 1502859462271,
+    "stop" : 1502859462414,
+    "duration" : 143
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 2
+  },
+  "failure" : {
+    "message" : "AssertionError: assert False\n +  where False = compare('{\"code\":10001,\"data\":\"参数account错误！\",\"msg\":\"输入错误！\"}', \"{'code': 10001, 'data': '参数account错误！', 'msg': '参数错误！'}\")",
+    "stackTrace" : "self = <test_onLogin.TestRegist object at 0x000002530A604E10>\nurl = 'onRegist.do'\nparam = '{\"account\":\"\",\"password\":\"a123456\",\"verifyCode\":\"123456\"}'\nexpected = \"{'code': 10001, 'data': '参数account错误！', 'msg': '参数错误！'}\"\n\n    @pytest.mark.parametrize(\"url,param,expected\", general_case(\"注册\", data))\n    @allure.feature('注册测试')\n    def test_Regist(self, url, param, expected):\n        newPara = general_arg(constArg, eval(param))\n        r = sendRequest(newPara, (path + url).strip())\n>       assert compare(r[0], expected)\nE       assert False\nE        +  where False = compare('{\"code\":10001,\"data\":\"参数account错误！\",\"msg\":\"输入错误！\"}', \"{'code': 10001, 'data': '参数account错误！', 'msg': '参数错误！'}\")\n\ntest_onLogin.py:30: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "1ea3f8a53652abf2",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ {
+    "name" : "生成参数",
+    "title" : "生成参数",
+    "time" : {
+      "start" : 1502859462273,
+      "stop" : 1502859462273,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "对比结果",
+    "title" : "对比结果",
+    "time" : {
+      "start" : 1502859462357,
+      "stop" : 1502859462357,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "用户注册",
+    "url" : "用户注册"
+  } ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "thread",
+    "value" : "30056-MainThread"
+  }, {
+    "name" : "feature",
+    "value" : "注册测试"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "testId",
+    "value" : "用户注册"
+  } ],
+  "parameters" : [ ]
+}

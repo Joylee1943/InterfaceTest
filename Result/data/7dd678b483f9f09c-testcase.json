@@ -1,0 +1,53 @@
+{
+  "uid" : "7dd678b483f9f09c",
+  "name" : "Testlogin.test_others[\\u6ce8\\u518c-onRegist.do-{\"account\":\"13701837591\",\"password\":\"a123456\",\"verifyCode\":\"1\"}-{'code': 10002, 'data': '', 'msg': '\\u9a8c\\u8bc1\\u7801\\u9519\\u8bef\\uff01'}]",
+  "title" : "Test others [\\u6ce8\\u518c-onRegist.do-{\"account\":\"13701837591\",\"password\":\"a123456\",\"verifyCode\":\"1\"}-{'code': 10002, 'data': '', 'msg': '\\u9a8c\\u8bc1\\u7801\\u9519\\u8bef\\uff01'}]",
+  "time" : {
+    "start" : 1502441482739,
+    "stop" : 1502441482768,
+    "duration" : 29
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "AssertionError: assert 10001 == 10002",
+    "stackTrace" : "self = <test_onLogin.Testlogin object at 0x0000024322835780>, tag = '注册'\nurl = 'onRegist.do'\nparam = '{\"account\":\"13701837591\",\"password\":\"a123456\",\"verifyCode\":\"1\"}'\nexpected = {'code': 10002, 'data': '', 'msg': '验证码错误！'}\n\n    @pytest.mark.parametrize(\"tag,url,param,expected\",list(data))\n    @allure.testcase('注册测试')\n    def test_others(self,tag,url,param,expected):\n        newPara=dict(constArg,**eval(param))\n        newPara[\"sign\"]=get_sign(newPara)\n        r = sendRequest(newPara,(path+url).strip())\n        result=eval(r[0])\n        expected=eval(expected)\n>       assert result[\"code\"]==expected[\"code\"]\nE       assert 10001 == 10002\n\ntest_onLogin.py:38: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "25d659ffa26dfa05",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "注册测试",
+    "url" : "注册测试"
+  } ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "thread",
+    "value" : "18508-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "testId",
+    "value" : "注册测试"
+  } ],
+  "parameters" : [ ]
+}

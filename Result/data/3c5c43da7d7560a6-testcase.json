@@ -1,0 +1,86 @@
+{
+  "uid" : "3c5c43da7d7560a6",
+  "name" : "TestRegist.test_Regist[onRegist.do-{\"account\":\"13701837591\",\"password\":\"123456\",\"verifyCode\":\"1\"}-]",
+  "title" : "Test regist [onRegist.do-{\"account\":\"13701837591\",\"password\":\"123456\",\"verifyCode\":\"1\"}-]",
+  "time" : {
+    "start" : 1502862555606,
+    "stop" : 1502862555711,
+    "duration" : 105
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 2
+  },
+  "failure" : {
+    "message" : "['  File \"<string>\", line 0\\n', '    \\n', '    ^\\n', 'SyntaxError: unexpected EOF while parsing\\n']",
+    "stackTrace" : "self = <test_onLogin.TestRegist object at 0x0000024B5D32BAC8>\nurl = 'onRegist.do'\nparam = '{\"account\":\"13701837591\",\"password\":\"123456\",\"verifyCode\":\"1\"}'\nexpected = ''\n\n    @pytest.mark.parametrize(\"url,param,expected\", general_case(\"注册\", data))\n    @allure.feature('注册测试')\n    def test_Regist(self, url, param, expected):\n        newPara = general_arg(constArg, eval(param))\n        r = sendRequest(newPara, (path + url).strip())\n>       assert compare(r[0], expected)\n\ntest_onLogin.py:31: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nC:\\Python\\Python36\\lib\\site-packages\\allure\\common.py:57: in impl\n    return func(*a, **kw)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nac = '{\"code\":10002,\"data\":\"\",\"msg\":\"验证码错误！\"}', ex = ''\n\n    @allure.step(\"对比结果\")\n    def compare(ac,ex):\n        actual = eval(ac)\n>       expected = eval(ex)\nE         File \"<string>\", line 0\nE           \nE           ^\nE       SyntaxError: unexpected EOF while parsing\n\nutils.py:178: SyntaxError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "b62c824c80aef466",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ {
+    "name" : "生成参数",
+    "title" : "生成参数",
+    "time" : {
+      "start" : 1502862555607,
+      "stop" : 1502862555607,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "对比结果",
+    "title" : "对比结果",
+    "time" : {
+      "start" : 1502862555669,
+      "stop" : 1502862555669,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "FAILED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "用户注册",
+    "url" : "用户注册"
+  } ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "feature",
+    "value" : "注册测试"
+  }, {
+    "name" : "thread",
+    "value" : "11976-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "testId",
+    "value" : "用户注册"
+  } ],
+  "parameters" : [ ]
+}

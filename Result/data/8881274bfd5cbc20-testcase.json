@@ -1,0 +1,71 @@
+{
+  "uid" : "8881274bfd5cbc20",
+  "name" : "TestGetVehicle.test_others[getVehicleInfo.do-{\"vin\":\"LSGGA54Y6CH22481@\",\"userId\":36896812,\"queryType\":1}-{'code': 10001, 'data': '\\u53c2\\u6570vin\\u9519\\u8bef\\uff01', 'msg': '\\u8f93\\u5165\\u9519\\u8bef\\uff01'}]",
+  "title" : "Test others [getVehicleInfo.do-{\"vin\":\"LSGGA54Y6CH22481@\",\"userId\":36896812,\"queryType\":1}-{'code': 10001, 'data': '\\u53c2\\u6570vin\\u9519\\u8bef\\uff01', 'msg': '\\u8f93\\u5165\\u9519\\u8bef\\uff01'}]",
+  "time" : {
+    "start" : 1502861004074,
+    "stop" : 1502861004173,
+    "duration" : 99
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 1
+  },
+  "failure" : {
+    "message" : "TypeError: string indices must be integers",
+    "stackTrace" : "@pytest.fixture(scope=\"function\")\n    def login():\n        newPara = general_arg(constArg, Login_account)\n        r = sendRequest(newPara, (path + url).strip())\n        d=eval(r[0])[\"data\"]\n>       return d[\"accessToken\"]\nE       TypeError: string indices must be integers\n\ntest_onLogin.py:21: TypeError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "BROKEN",
+  "suite" : {
+    "uid" : "5f0117a1ccd54875",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ {
+    "name" : "生成参数",
+    "title" : "生成参数",
+    "time" : {
+      "start" : 1502861004075,
+      "stop" : 1502861004075,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "查询车辆",
+    "url" : "查询车辆"
+  } ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "29212-MainThread"
+  }, {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "testId",
+    "value" : "查询车辆"
+  }, {
+    "name" : "feature",
+    "value" : "查询车辆测试"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

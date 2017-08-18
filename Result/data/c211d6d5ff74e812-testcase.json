@@ -1,0 +1,41 @@
+{
+  "uid" : "c211d6d5ff74e812",
+  "name" : "test_onLogin",
+  "title" : "Test on login",
+  "time" : {
+    "start" : 1502790635801,
+    "stop" : 1502790635801,
+    "duration" : 0
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "failed",
+    "stackTrace" : "C:\\Python\\Python36\\lib\\site-packages\\_pytest\\python.py:418: in _importtestmodule\n    mod = self.fspath.pyimport(ensuresyspath=importmode)\nC:\\Python\\Python36\\lib\\site-packages\\py\\_path\\local.py:662: in pyimport\n    __import__(modname)\nE     File \"E:\\PythonProject\\InterfaceTest\\test_onLogin.py\", line 43\nE       if \"msg\" in actual and actual[\"msg\"]!=expected[\"msg\"]\nE                                                           ^\nE   SyntaxError: invalid syntax"
+  },
+  "description" : {
+    "value" : "This is the tests collection phase. Failures are modules that failed to collect.",
+    "type" : "TEXT"
+  },
+  "severity" : "NORMAL",
+  "status" : "BROKEN",
+  "suite" : {
+    "uid" : "13e11d3dd6fc44d1",
+    "name" : "test_collection_phase",
+    "title" : "Collection phase"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-title",
+    "value" : "Collection phase"
+  }, {
+    "name" : "suite-name",
+    "value" : "test_collection_phase"
+  } ],
+  "parameters" : [ ]
+}

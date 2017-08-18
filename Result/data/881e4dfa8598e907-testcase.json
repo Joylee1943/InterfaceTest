@@ -1,0 +1,98 @@
+{
+  "uid" : "881e4dfa8598e907",
+  "name" : "TestGetVehicle.test_others[addVehicleInfo.do-{\"vin\":\"LSGGA54Y6CH22481@\",\"userId\":2,\"colorId\":1}-{'code': 10001, 'data': '\\u53c2\\u6570vin\\u9519\\u8bef\\uff01', 'msg': '\\u8f93\\u5165\\u9519\\u8bef\\uff01'}]",
+  "title" : "Test others [addVehicleInfo.do-{\"vin\":\"LSGGA54Y6CH22481@\",\"userId\":2,\"colorId\":1}-{'code': 10001, 'data': '\\u53c2\\u6570vin\\u9519\\u8bef\\uff01', 'msg': '\\u8f93\\u5165\\u9519\\u8bef\\uff01'}]",
+  "time" : {
+    "start" : 1502860982493,
+    "stop" : 1502860982968,
+    "duration" : 475
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "62a4ed0b7eb1432d",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ {
+    "name" : "生成参数",
+    "title" : "生成参数",
+    "time" : {
+      "start" : 1502860982494,
+      "stop" : 1502860982494,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "生成参数",
+    "title" : "生成参数",
+    "time" : {
+      "start" : 1502860982884,
+      "stop" : 1502860982884,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "对比结果",
+    "title" : "对比结果",
+    "time" : {
+      "start" : 1502860982967,
+      "stop" : 1502860982967,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "查询车辆",
+    "url" : "查询车辆"
+  } ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "thread",
+    "value" : "24020-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "testId",
+    "value" : "查询车辆"
+  }, {
+    "name" : "feature",
+    "value" : "查询车辆测试"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

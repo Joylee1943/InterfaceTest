@@ -1,0 +1,71 @@
+{
+  "uid" : "bcdb5ced850acea1",
+  "name" : "TestGetVehicle.test_others[getVehicleInfo.do-{\"vin\":\"LSGGA54Y6CH224814 \",\"userId\":22222,\"queryType\":2}-{\"code\":11003,\"data\":\"\",\"msg\":\"\\u7528\\u6237\\u4e0d\\u5b58\\u5728\"}]",
+  "title" : "Test others [getVehicleInfo.do-{\"vin\":\"LSGGA54Y6CH224814 \",\"userId\":22222,\"queryType\":2}-{\"code\":11003,\"data\":\"\",\"msg\":\"\\u7528\\u6237\\u4e0d\\u5b58\\u5728\"}]",
+  "time" : {
+    "start" : 1502861067063,
+    "stop" : 1502861067135,
+    "duration" : 72
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 1
+  },
+  "failure" : {
+    "message" : "['  File \"<string>\", line 0\\n', '    \\n', '    ^\\n', 'SyntaxError: unexpected EOF while parsing\\n']",
+    "stackTrace" : "@pytest.fixture(scope=\"function\")\n    def login():\n        newPara = general_arg(constArg, Login_account)\n        r = sendRequest(newPara, (path + url).strip())\n        d=eval(r[0])[\"data\"]\n>       return eval(d)[\"accessToken\"]\nE         File \"<string>\", line 0\nE           \nE           ^\nE       SyntaxError: unexpected EOF while parsing\n\ntest_onLogin.py:21: SyntaxError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "BROKEN",
+  "suite" : {
+    "uid" : "9a114b855a824137",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ {
+    "name" : "生成参数",
+    "title" : "生成参数",
+    "time" : {
+      "start" : 1502861067064,
+      "stop" : 1502861067064,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "查询车辆",
+    "url" : "查询车辆"
+  } ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "thread",
+    "value" : "11892-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "testId",
+    "value" : "查询车辆"
+  }, {
+    "name" : "feature",
+    "value" : "查询车辆测试"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

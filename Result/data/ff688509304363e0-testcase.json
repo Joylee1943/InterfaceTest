@@ -1,0 +1,71 @@
+{
+  "uid" : "ff688509304363e0",
+  "name" : "TestGetVehicle.test_others[getVehicleInfo.do-{\"vin\":\"LSGGA54Y6CH22481\",\"userId\":36896812,\"queryType\":2}-{'code': 10001, 'data': '\\u53c2\\u6570vin\\u9519\\u8bef\\uff01', 'msg': '\\u53c2\\u6570\\u9519\\u8bef\\uff01'}]",
+  "title" : "Test others [getVehicleInfo.do-{\"vin\":\"LSGGA54Y6CH22481\",\"userId\":36896812,\"queryType\":2}-{'code': 10001, 'data': '\\u53c2\\u6570vin\\u9519\\u8bef\\uff01', 'msg': '\\u53c2\\u6570\\u9519\\u8bef\\uff01'}]",
+  "time" : {
+    "start" : 1502859696237,
+    "stop" : 1502859696321,
+    "duration" : 84
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 1
+  },
+  "failure" : {
+    "message" : "TypeError: string indices must be integers",
+    "stackTrace" : "@pytest.fixture(scope=\"function\")\n    def login():\n        newPara = general_arg(constArg, Login_account)\n        r = sendRequest(newPara, (path + url).strip())\n>       return r[0]['data']['accessToken']\nE       TypeError: string indices must be integers\n\ntest_onLogin.py:20: TypeError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "BROKEN",
+  "suite" : {
+    "uid" : "4d2886fecb3d5264",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ {
+    "name" : "生成参数",
+    "title" : "生成参数",
+    "time" : {
+      "start" : 1502859696238,
+      "stop" : 1502859696238,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "查询车辆",
+    "url" : "查询车辆"
+  } ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "24260-MainThread"
+  }, {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "feature",
+    "value" : "查询车辆测试"
+  }, {
+    "name" : "testId",
+    "value" : "查询车辆"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

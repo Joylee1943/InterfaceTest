@@ -1,0 +1,50 @@
+{
+  "uid" : "bd631a4c91b84912",
+  "name" : "Testlogin.test_others[\\u6ce8\\u518c-onRegist.do-{\"account\":\"13701837591\",\"password\":\"123456\",\"verifyCode\":\"1\"}-]",
+  "title" : "Test others [\\u6ce8\\u518c-onRegist.do-{\"account\":\"13701837591\",\"password\":\"123456\",\"verifyCode\":\"1\"}-]",
+  "time" : {
+    "start" : 1502441560767,
+    "stop" : 1502441560801,
+    "duration" : 34
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "['  File \"<string>\", line 0\\n', '    \\n', '    ^\\n', 'SyntaxError: unexpected EOF while parsing\\n']",
+    "stackTrace" : "self = <test_onLogin.Testlogin object at 0x0000023389708080>, tag = '注册'\nurl = 'onRegist.do'\nparam = '{\"account\":\"13701837591\",\"password\":\"123456\",\"verifyCode\":\"1\"}'\nexpected = ''\n\n    @pytest.mark.parametrize(\"tag,url,param,expected\",list(data))\n    @allure.feature('注册测试')\n    def test_others(self,tag,url,param,expected):\n        newPara=dict(constArg,**eval(param))\n        newPara[\"sign\"]=get_sign(newPara)\n        r = sendRequest(newPara,(path+url).strip())\n        result=eval(r[0])\n>       expected=eval(expected)\nE         File \"<string>\", line 0\nE           \nE           ^\nE       SyntaxError: unexpected EOF while parsing\n\ntest_onLogin.py:37: SyntaxError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "185cd35c4c0d342f",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "feature",
+    "value" : "注册测试"
+  }, {
+    "name" : "thread",
+    "value" : "17164-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

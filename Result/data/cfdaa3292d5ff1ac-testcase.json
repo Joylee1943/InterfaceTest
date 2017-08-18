@@ -1,0 +1,62 @@
+{
+  "uid" : "cfdaa3292d5ff1ac",
+  "name" : "Testlogin.test_others[\\u6ce8\\u518c-onRegist.do-{\"account\":\"\",\"password\":\"a123456\",\"verifyCode\":\"123456\"}-{'code': 10001, 'data': '\\u53c2\\u6570account\\u9519\\u8bef\\uff01', 'msg': '\\u53c2\\u6570\\u9519\\u8bef\\uff01'}]",
+  "title" : "Test others [\\u6ce8\\u518c-onRegist.do-{\"account\":\"\",\"password\":\"a123456\",\"verifyCode\":\"123456\"}-{'code': 10001, 'data': '\\u53c2\\u6570account\\u9519\\u8bef\\uff01', 'msg': '\\u53c2\\u6570\\u9519\\u8bef\\uff01'}]",
+  "time" : {
+    "start" : 1502788173252,
+    "stop" : 1502788173286,
+    "duration" : 34
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 1
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "faa3ac1586bb8049",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ {
+    "name" : "测试模块：<test_onLogin.Testlogin object at 0x000001CAB1130A58>",
+    "title" : "测试模块：<test_onLogin.Testlogin object at 0x000001CAB1130A58>",
+    "time" : {
+      "start" : 1502788173253,
+      "stop" : 1502788173286,
+      "duration" : 33
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "feature",
+    "value" : "注册测试"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "18600-MainThread"
+  } ],
+  "parameters" : [ ]
+}

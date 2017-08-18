@@ -1,0 +1,50 @@
+{
+  "uid" : "c92ac63c7c224502",
+  "name" : "Testlogin.test_others[\\u6ce8\\u518c-onRegist.do-{\"account\":\"13701837591\",\"password\":\"a123456\",\"verifyCode\":\"\"}-{'code': 10001, 'data': '\\u53c2\\u6570verifyCode\\u9519\\u8bef\\uff01', 'msg': '\\u53c2\\u6570\\u9519\\u8bef\\uff01'}]",
+  "title" : "Test others [\\u6ce8\\u518c-onRegist.do-{\"account\":\"13701837591\",\"password\":\"a123456\",\"verifyCode\":\"\"}-{'code': 10001, 'data': '\\u53c2\\u6570verifyCode\\u9519\\u8bef\\uff01', 'msg': '\\u53c2\\u6570\\u9519\\u8bef\\uff01'}]",
+  "time" : {
+    "start" : 1502787467191,
+    "stop" : 1502787467198,
+    "duration" : 7
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "IndexError: tuple index out of range",
+    "stackTrace" : "a = (<test_onLogin.Testlogin object at 0x000001B66D1D7320>,)\nkw = {'expected': \"{'code': 10001, 'data': '参数verifyCode错误！', 'msg': '参数错误！'}\", 'param': '{\"account\":\"13701837591\",\"password\":\"a123456\",\"verifyCode\":\"\"}', 'tag': '注册', 'url': 'onRegist.do'}\n\n    @wraps(func)\n    def impl(*a, **kw):\n>       with StepContext(self.allure, self.title.format(*a, **kw)):\nE       IndexError: tuple index out of range\n\nC:\\Python\\Python36\\lib\\site-packages\\allure\\common.py:56: IndexError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "fe7a72ba7d361525",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "feature",
+    "value" : "注册测试"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "19900-MainThread"
+  } ],
+  "parameters" : [ ]
+}

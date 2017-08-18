@@ -1,0 +1,86 @@
+{
+  "uid" : "4d54180b1a07b427",
+  "name" : "Testlogin.test_others[onLogin.do-{\"account\":\"18501604617 \",\"password\":\"a123456\"}-{'code': 0, 'data': {'account': '18501604617', 'userId': 33}, 'msg': '\\u6210\\u529f'}]",
+  "title" : "Test others [onLogin.do-{\"account\":\"18501604617 \",\"password\":\"a123456\"}-{'code': 0, 'data': {'account': '18501604617', 'userId': 33}, 'msg': '\\u6210\\u529f'}]",
+  "time" : {
+    "start" : 1502862556482,
+    "stop" : 1502862556555,
+    "duration" : 73
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 2
+  },
+  "failure" : {
+    "message" : "AssertionError: assert False\n +  where False = compare('{\"code\":10001,\"data\":\"参数account错误！\",\"msg\":\"输入错误！\"}', \"{'code': 0, 'data': {'account': '18501604617', 'userId': 33}, 'msg': '成功'}\")",
+    "stackTrace" : "self = <test_onLogin.Testlogin object at 0x0000024B5D2ACA90>, url = 'onLogin.do'\nparam = '{\"account\":\"18501604617 \",\"password\":\"a123456\"}'\nexpected = \"{'code': 0, 'data': {'account': '18501604617', 'userId': 33}, 'msg': '成功'}\"\n\n    @pytest.mark.parametrize(\"url,param,expected\", general_case(\"登录\", data))\n    @allure.feature('登录测试')\n    def test_others(self, url, param, expected):\n        newPara = general_arg(constArg, eval(param))\n        r = sendRequest(newPara, (path + url).strip())\n>       assert compare(r[0], expected)\nE       assert False\nE        +  where False = compare('{\"code\":10001,\"data\":\"参数account错误！\",\"msg\":\"输入错误！\"}', \"{'code': 0, 'data': {'account': '18501604617', 'userId': 33}, 'msg': '成功'}\")\n\ntest_onLogin.py:41: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "b62c824c80aef466",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ {
+    "name" : "生成参数",
+    "title" : "生成参数",
+    "time" : {
+      "start" : 1502862556483,
+      "stop" : 1502862556483,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "对比结果",
+    "title" : "对比结果",
+    "time" : {
+      "start" : 1502862556552,
+      "stop" : 1502862556552,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "用户登录",
+    "url" : "用户登录"
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "登录测试"
+  }, {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "testId",
+    "value" : "用户登录"
+  }, {
+    "name" : "thread",
+    "value" : "11976-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

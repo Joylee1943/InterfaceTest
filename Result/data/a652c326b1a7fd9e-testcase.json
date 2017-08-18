@@ -1,0 +1,47 @@
+{
+  "uid" : "a652c326b1a7fd9e",
+  "name" : "Testlogin.test_others[\\u6ce8\\u518c-onRegist.do-{\"account\":\"13701837591\",\"password\":\"a123456\",\"verifyCode\":\"\"}-{'code': 10001, 'data': '\\u53c2\\u6570verifyCode\\u9519\\u8bef\\uff01', 'msg': '\\u53c2\\u6570\\u9519\\u8bef\\uff01'}]",
+  "title" : "Test others [\\u6ce8\\u518c-onRegist.do-{\"account\":\"13701837591\",\"password\":\"a123456\",\"verifyCode\":\"\"}-{'code': 10001, 'data': '\\u53c2\\u6570verifyCode\\u9519\\u8bef\\uff01', 'msg': '\\u53c2\\u6570\\u9519\\u8bef\\uff01'}]",
+  "time" : {
+    "start" : 1502440132015,
+    "stop" : 1502440132050,
+    "duration" : 35
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "TypeError: string indices must be integers",
+    "stackTrace" : "self = <test_onLogin.Testlogin object at 0x0000026F3A9A22E8>, tag = '注册'\nurl = 'onRegist.do'\nparam = '{\"account\":\"13701837591\",\"password\":\"a123456\",\"verifyCode\":\"\"}'\nexpected = \"{'code': 10001, 'data': '参数verifyCode错误！', 'msg': '参数错误！'}\"\n\n    @pytest.mark.parametrize(\"tag,url,param,expected\",list(data))\n    def test_others(self,tag,url,param,expected):\n        newPara=dict(constArg,**eval(param))\n        newPara[\"sign\"]=get_sign(newPara)\n        r = sendRequest(newPara,(path+url).strip())\n        result=eval(r[0])\n>       assert result[\"code\"]==expected[\"code\"]\nE       TypeError: string indices must be integers\n\ntest_onLogin.py:35: TypeError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "3552e5b0d9d93915",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "thread",
+    "value" : "19392-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

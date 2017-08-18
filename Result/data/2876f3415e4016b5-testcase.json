@@ -1,0 +1,56 @@
+{
+  "uid" : "2876f3415e4016b5",
+  "name" : "Testlogin.test_others[\\u6ce8\\u518c-onRegist.do-{\"account\":\"1370183759!\",\"password\":\"a123456\",\"verifyCode\":\"1\"}-{'code': 10005, 'data': '', 'msg': '\\u624b\\u673a\\u53f7\\u9519\\u8bef\\uff01'}]",
+  "title" : "Test others [\\u6ce8\\u518c-onRegist.do-{\"account\":\"1370183759!\",\"password\":\"a123456\",\"verifyCode\":\"1\"}-{'code': 10005, 'data': '', 'msg': '\\u624b\\u673a\\u53f7\\u9519\\u8bef\\uff01'}]",
+  "time" : {
+    "start" : 1502787248544,
+    "stop" : 1502787248576,
+    "duration" : 32
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "AssertionError: assert 10001 == 10005",
+    "stackTrace" : "self = <test_onLogin.Testlogin object at 0x000001AFC63E6240>, tag = '注册'\nurl = 'onRegist.do'\nparam = '{\"account\":\"1370183759!\",\"password\":\"a123456\",\"verifyCode\":\"1\"}'\nexpected = {'code': 10005, 'data': '', 'msg': '手机号错误！'}\n\n    @pytest.mark.parametrize(\"tag,url,param,expected\",list(data))\n    @allure.feature('注册测试')\n    @allure.testcase(\"{1}\")\n    def test_others(self,tag,url,param,expected):\n        newPara=dict(constArg,**eval(param))\n        newPara[\"sign\"]=get_sign(newPara)\n        r = sendRequest(newPara,(path+url).strip())\n        result=eval(r[0])\n        expected=eval(expected)\n>       assert result[\"code\"]==expected[\"code\"]\nE       assert 10001 == 10005\n\ntest_onLogin.py:39: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "610c7e79d50b3486",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "{1}",
+    "url" : "{1}"
+  } ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "25336-MainThread"
+  }, {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "testId",
+    "value" : "{1}"
+  }, {
+    "name" : "feature",
+    "value" : "注册测试"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

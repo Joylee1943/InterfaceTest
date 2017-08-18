@@ -1,0 +1,101 @@
+{
+  "uid" : "22d66f3a78cef30a",
+  "name" : "TestGetVehicle.test_others[addVehicleInfo.do-{\"vin\":\"LSGGA54Y6CH22481@\",\"userId\":2,\"colorId\":1}-{'code': 10001, 'data': '\\u53c2\\u6570vin\\u9519\\u8bef\\uff01', 'msg': '\\u53c2\\u6570\\u9519\\u8bef\\uff01'}]",
+  "title" : "Test others [addVehicleInfo.do-{\"vin\":\"LSGGA54Y6CH22481@\",\"userId\":2,\"colorId\":1}-{'code': 10001, 'data': '\\u53c2\\u6570vin\\u9519\\u8bef\\uff01', 'msg': '\\u53c2\\u6570\\u9519\\u8bef\\uff01'}]",
+  "time" : {
+    "start" : 1502860769818,
+    "stop" : 1502860770338,
+    "duration" : 520
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : {
+    "message" : "AssertionError: assert False\n +  where False = compare('{\"code\":10001,\"data\":\"参数vin错误！\",\"msg\":\"输入错误！\"}', \"{'code': 10001, 'data': '参数vin错误！', 'msg': '参数错误！'}\")",
+    "stackTrace" : "self = <test_onLogin.TestGetVehicle object at 0x00000247553FE0B8>\nlogin = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50IjoiMTUwMDA1MTAyNDQiLCJ1c2VySWQiOiIzNjg5NjgxMiIsImlzcyI6ImF1dG8tbGluay1hcHAtc2VydmVyIiwiZXhwIjoxNTAzMDMzNjQzLCJuYmYiOjE1MDI4NjA4NDN9.c_yrv7-Si4PvddNnQ5kvLa4Lr3Q1z14SEzpqKltPtY4'\nurl = 'addVehicleInfo.do'\nparam = '{\"vin\":\"LSGGA54Y6CH22481@\",\"userId\":2,\"colorId\":1}'\nexpected = \"{'code': 10001, 'data': '参数vin错误！', 'msg': '参数错误！'}\"\n\n    @pytest.mark.parametrize(\"url,param,expected\", general_case(\"查询车辆\", data))\n    @allure.feature('查询车辆测试')\n    def test_others(self, login,url, param, expected):\n        newPara = general_arg(constArg, eval(param))\n        r = sendRequest(newPara, (path + url).strip(),login)\n>       assert compare(r[0], expected)\nE       assert False\nE        +  where False = compare('{\"code\":10001,\"data\":\"参数vin错误！\",\"msg\":\"输入错误！\"}', \"{'code': 10001, 'data': '参数vin错误！', 'msg': '参数错误！'}\")\n\ntest_onLogin.py:50: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "6186ef3447d3797e",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ {
+    "name" : "生成参数",
+    "title" : "生成参数",
+    "time" : {
+      "start" : 1502860769818,
+      "stop" : 1502860769818,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "生成参数",
+    "title" : "生成参数",
+    "time" : {
+      "start" : 1502860770201,
+      "stop" : 1502860770201,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "对比结果",
+    "title" : "对比结果",
+    "time" : {
+      "start" : 1502860770302,
+      "stop" : 1502860770302,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "查询车辆",
+    "url" : "查询车辆"
+  } ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "feature",
+    "value" : "查询车辆测试"
+  }, {
+    "name" : "testId",
+    "value" : "查询车辆"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "33740-MainThread"
+  } ],
+  "parameters" : [ ]
+}

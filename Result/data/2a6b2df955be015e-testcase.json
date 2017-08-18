@@ -1,0 +1,47 @@
+{
+  "uid" : "2a6b2df955be015e",
+  "name" : "Testlogin.test_onLogin[param1-expected1]",
+  "title" : "Test on login [param1-expected1]",
+  "time" : {
+    "start" : 1502437975915,
+    "stop" : 1502437975947,
+    "duration" : 32
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "AssertionError: assert b'{\"code\":100...xef\\xbc\\x81\"}' == {'code': 11004...msg': '密码错误！'}\n  Full diff:\n  + {'code': 11004, 'data': '', 'msg': '密码错误！'}\n  - (b'{\"code\":10001,\"data\":\"\\xe5\\x8f\\x82\\xe6\\x95\\xb0password\\xe9\\x94\\x99\\xe8'\n  -  b'\\xaf\\xaf\\xef\\xbc\\x81\",\"msg\":\"\\xe8\\xbe\\x93\\xe5\\x85\\xa5\\xe9\\x94\\x99\\xe8'\n  -  b'\\xaf\\xaf\\xef\\xbc\\x81\"}')",
+    "stackTrace" : "self = <test_GetVehicleComputer.Testlogin object at 0x000001BF9FE7E710>\nparam = {'account': '13701837591', 'password': ''}\nexpected = {'code': 11004, 'data': '', 'msg': '密码错误！'}\n\n    @pytest.mark.parametrize(\"param,expected\",login_data)\n    def test_onLogin(self,param,expected):\n        r = sendRequest(param,(path+url).strip())\n        result=r[0]\n>       assert result==expected\nE       assert b'{\"code\":100...xef\\xbc\\x81\"}' == {'code': 11004...msg': '密码错误！'}\nE         Full diff:\nE         + {'code': 11004, 'data': '', 'msg': '密码错误！'}\nE         - (b'{\"code\":10001,\"data\":\"\\xe5\\x8f\\x82\\xe6\\x95\\xb0password\\xe9\\x94\\x99\\xe8'\nE         -  b'\\xaf\\xaf\\xef\\xbc\\x81\",\"msg\":\"\\xe8\\xbe\\x93\\xe5\\x85\\xa5\\xe9\\x94\\x99\\xe8'\nE         -  b'\\xaf\\xaf\\xef\\xbc\\x81\"}')\n\ntest_GetVehicleComputer.py:19: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "2fe1b7e3922c6d31",
+    "name" : "test_GetVehicleComputer",
+    "title" : "Test get vehicle computer"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_GetVehicleComputer"
+  }, {
+    "name" : "thread",
+    "value" : "2456-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

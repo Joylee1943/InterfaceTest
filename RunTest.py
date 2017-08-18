@@ -5,10 +5,13 @@ import pytest
 import sys
 
 args = ['-s', '-q', '--alluredir', './Result']
-#Product = "Mofang"
+
+Product=""
+
 if __name__ == '__main__':
-    # if sys.args[4] == "CheDunDev":
-    #     Product = "CheDunDev"
+    if sys.argv[1] in ["chedunapp_dev","chedunapp","Mofang","Mofang_dev"]:
+        Product = sys.argv[1]
+    #args.append(sys.argv[1])
     pytest.main(args)
     cmd = 'allure generate %s -o %s' % ('./Result', './Result')
     try:

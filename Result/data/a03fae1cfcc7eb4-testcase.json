@@ -1,0 +1,71 @@
+{
+  "uid" : "a03fae1cfcc7eb4",
+  "name" : "TestGetVehicle.test_others[getVehicleInfo.do-{\"vin\":\"11111111111111111\",\"userId\":36896812,\"queryType\":2}-{\"code\":16002,\"data\":\"\",\"msg\":\"\\u8f66\\u8f86\\u4fe1\\u606f\\u672a\\u627e\\u5230\\uff01\"}]",
+  "title" : "Test others [getVehicleInfo.do-{\"vin\":\"11111111111111111\",\"userId\":36896812,\"queryType\":2}-{\"code\":16002,\"data\":\"\",\"msg\":\"\\u8f66\\u8f86\\u4fe1\\u606f\\u672a\\u627e\\u5230\\uff01\"}]",
+  "time" : {
+    "start" : 1502861067135,
+    "stop" : 1502861067223,
+    "duration" : 88
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 1
+  },
+  "failure" : {
+    "message" : "['  File \"<string>\", line 0\\n', '    \\n', '    ^\\n', 'SyntaxError: unexpected EOF while parsing\\n']",
+    "stackTrace" : "@pytest.fixture(scope=\"function\")\n    def login():\n        newPara = general_arg(constArg, Login_account)\n        r = sendRequest(newPara, (path + url).strip())\n        d=eval(r[0])[\"data\"]\n>       return eval(d)[\"accessToken\"]\nE         File \"<string>\", line 0\nE           \nE           ^\nE       SyntaxError: unexpected EOF while parsing\n\ntest_onLogin.py:21: SyntaxError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "BROKEN",
+  "suite" : {
+    "uid" : "9a114b855a824137",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ {
+    "name" : "生成参数",
+    "title" : "生成参数",
+    "time" : {
+      "start" : 1502861067135,
+      "stop" : 1502861067136,
+      "duration" : 1
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "查询车辆",
+    "url" : "查询车辆"
+  } ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "thread",
+    "value" : "11892-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "testId",
+    "value" : "查询车辆"
+  }, {
+    "name" : "feature",
+    "value" : "查询车辆测试"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

@@ -1,0 +1,41 @@
+{
+  "uid" : "233a85ce4024e793",
+  "name" : "test_onLogin",
+  "title" : "Test on login",
+  "time" : {
+    "start" : 1502855934787,
+    "stop" : 1502855934787,
+    "duration" : 0
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "failed",
+    "stackTrace" : "test_onLogin.py:16: in <module>\n    @pytest.fixture(scope=function)\nE   NameError: name 'function' is not defined"
+  },
+  "description" : {
+    "value" : "This is the tests collection phase. Failures are modules that failed to collect.",
+    "type" : "TEXT"
+  },
+  "severity" : "NORMAL",
+  "status" : "BROKEN",
+  "suite" : {
+    "uid" : "f915b43f70f20b0d",
+    "name" : "test_collection_phase",
+    "title" : "Collection phase"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-title",
+    "value" : "Collection phase"
+  }, {
+    "name" : "suite-name",
+    "value" : "test_collection_phase"
+  } ],
+  "parameters" : [ ]
+}

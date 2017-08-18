@@ -1,0 +1,53 @@
+{
+  "uid" : "73b780080c93b745",
+  "name" : "TestRegist.test_Regist[\\u6ce8\\u518c-onRegist.do-{\"account\":\"\",\"password\":\"a123456\",\"verifyCode\":\"123456\"}-{'code': 10001, 'data': '\\u53c2\\u6570account\\u9519\\u8bef\\uff01', 'msg': '\\u53c2\\u6570\\u9519\\u8bef\\uff01'}]",
+  "title" : "Test regist [\\u6ce8\\u518c-onRegist.do-{\"account\":\"\",\"password\":\"a123456\",\"verifyCode\":\"123456\"}-{'code': 10001, 'data': '\\u53c2\\u6570account\\u9519\\u8bef\\uff01', 'msg': '\\u53c2\\u6570\\u9519\\u8bef\\uff01'}]",
+  "time" : {
+    "start" : 1502789867325,
+    "stop" : 1502789867367,
+    "duration" : 42
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "bbb16b7e541d412b",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "用户注册",
+    "url" : "用户注册"
+  } ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "feature",
+    "value" : "注册测试"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "testId",
+    "value" : "用户注册"
+  }, {
+    "name" : "thread",
+    "value" : "25608-MainThread"
+  } ],
+  "parameters" : [ ]
+}

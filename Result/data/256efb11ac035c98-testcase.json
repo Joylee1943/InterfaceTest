@@ -1,0 +1,47 @@
+{
+  "uid" : "256efb11ac035c98",
+  "name" : "Testlogin.test_onLogin[param0-expected0]",
+  "title" : "Test on login [param0-expected0]",
+  "time" : {
+    "start" : 1502438032603,
+    "stop" : 1502438032944,
+    "duration" : 341
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "TypeError: byte indices must be integers or slices, not str",
+    "stackTrace" : "self = <test_onLogin.Testlogin object at 0x000002B59B9BF358>\nparam = {'account': '', 'password': 'd41d8cd98f00b204e9800998ecf8427e'}\nexpected = {'code': 10001}\n\n    @pytest.mark.parametrize(\"param,expected\",login_data)\n    def test_onLogin(self,param,expected):\n        newPara=dict(constArg,**param)\n        newPara[\"sign\"]=get_sign(newPara)\n        r = sendRequest(newPara,(path+url).strip())\n        result=r[0]\n>       assert result[\"code\"]==expected[\"code\"]\nE       TypeError: byte indices must be integers or slices, not str\n\ntest_onLogin.py:25: TypeError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "efd52ddaa1da49d8",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "3632-MainThread"
+  }, {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

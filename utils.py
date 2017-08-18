@@ -15,39 +15,6 @@ import xlwt
 from collections import Iterable
 
 
-def get_sign(args):
-    result = []
-    for keys, values in args.items():
-        # print(values)
-        if not isinstance(values, str):
-            values = str(values)
-        result.append(values)
-    result.append("9a93a8b14d664f2e")
-    result.sort()
-    #print("排序之后的数据：", result)
-    result_join = '&'.join(result)
-    #print("拼接之后的数据：", result_join)
-
-    m = hashlib.md5(result_join.encode("utf-8"))
-    #print(m.hexdigest())
-    return m.hexdigest()
-
-
-def sendRequest(arg, url, token=''):
-    try:
-        if token == '':
-            headers = {"content-type": "application/json"}
-        else:
-            headers = {"content-type": "application/json", "Authorization": token}
-        Start = time.time()
-        r = requests.post(url, data=json.dumps(arg), headers=headers)
-        End = time.time()
-        diff = End - Start
-        return r.content.decode(), diff
-    except Exception as e:
-        print(e)
-
-
 def get_db():
     conn = MySQLdb.connect(host='192.168.8.203', user='acube_user', passwd='7W6/ftR1CEUYv61w', port=3306, db='acube',
                            charset='utf8')
@@ -62,6 +29,7 @@ def invoke(cmd):
     output, errors = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
     o = output.decode("utf-8")
     return o
+
 
 def write_excel_data(data, excel, overwrite=False):
     if not data:
@@ -103,6 +71,7 @@ def write_excel_data(data, excel, overwrite=False):
     except Exception as e:
         print(e)
         return False
+
 
 def get_file_data(file):
     ext = os.path.splitext(file)[1]
@@ -150,36 +119,91 @@ def get_excel_data(excel):
     return data
 
 
+@allure.step("生成sign值")
+def get_sign(args, product):
+    result = []
+    for keys, values in args.items():
+        # print(values)
+        if not isinstance(values, str):
+            values = str(values)
+        result.append(values)
+
+    if product in ["chedunapp_dev", "chedunapp"]:
+        result.append("9a93a8b14d664f2e")
+    elif product in ["mofang_dev", "mofang"]:
+        result.append("6613787ce111640e9b43")
+
+    result.sort()
+    # print("排序之后的数据：", result)
+    result_join = '&'.join(result)
+    # print("拼接之后的数据：", result_join)
+
+    m = hashlib.md5(result_join.encode("utf-8"))
+    print(m.hexdigest())
+    return m.hexdigest()
+
+
+@allure.step("发送request")
+def sendRequest(arg, url, token=''):
+    print(arg)
+    print(url)
+    try:
+        if token == '':
+            headers = {"content-type": "application/json"}
+        else:
+            headers = {"content-type": "application/json", "Authorization": token}
+        Start = time.time()
+        r = requests.post(url, data=json.dumps(arg), headers=headers)
+        End = time.time()
+        diff = End - Start
+        return r.content.decode(), diff
+    except Exception as e:
+        print(e)
+
+
 @allure.step("生成参数")
-def general_arg(const_arg,param):
+def general_arg(const_arg, param, product):
     if "password" in param:
         m = hashlib.md5(param["password"].encode("utf-8"))
         param["password"] = m.hexdigest()
 
-    newParam=dict(const_arg,**param)
-    newParam["sign"]=get_sign(newParam)
+    newParam = dict(const_arg, **param)
+    newParam["sign"] = get_sign(newParam, product)
 
-    return newParam
+    if product in ["chedunapp_dev", "chedunapp"]:
+        return newParam
+    elif product in ["mofang_dev", "mofang"]:
+        #print("requestJSON=" + newParam)
+        return newParam
 
 
 @allure.step("获取{0} case")
-def general_case(tag,all_data):
-    case_list=[]
-    for d in all_data:
-        if d[0]==tag:
+def general_case(tag, product):
+    data = []
+    if product in ["chedunapp_dev", "chedunapp"]:
+        data = get_file_data('./Data/ChedunApp_InterfaceTest.xlsx')['Sheet1'][1:]
+    elif product in ["mofang_dev", "mofang"]:
+        data = get_file_data('./Data/Mofang_InterfaceTest.xlsx')['Sheet1'][1:]
+
+    case_list = []
+    for d in data:
+        if d[0] == tag:
             case_list.append(d[1:])
 
     return case_list
 
 
 @allure.step("对比结果")
-def compare(ac,ex):
+def compare(ac, ex):
     actual = eval(ac)
     expected = eval(ex)
-    if actual["code"]!=expected["code"]:
+    if "code" in actual and actual["code"] != expected["code"]:
         return False
 
-    if "msg" in actual and actual["msg"]!=expected["msg"]:
+    if "errorCode" in actual and actual["errorCode"] != expected["code"]:
+        return False
+
+    if "msg" in actual and actual["msg"] != expected["msg"]:
         return False
 
     return True

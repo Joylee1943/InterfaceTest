@@ -1,0 +1,86 @@
+{
+  "uid" : "55e29893ff3c990e",
+  "name" : "TestGetVehicle.test_others[getVehicleInfo.do-{\"vin\":\"LSGGA54Y6CH224814 \",\"userId\":36896812,\"queryType\":2}-{\"code\":0,\"data\":{\"vehicleBrandImage\":\"http://img.lianchexing.cn/app/1.png\",\"vehicleBrandName\":\"\\u4e0a\\u6d77\\u901a\\u7528\\u522b\\u514b\",\"vehicleColorList\":[{\"colorId\":1,\"colorName\":\"\\u5e03\\u6717\\u68d5\",\"colorTone\":\"5C4646\"}],\"vehicleModelName\":\"2012\\u6b3e\\u65b0\\u541b\\u5a012.0L\"},\"msg\":\"\\u6210\\u529f\"}]",
+  "title" : "Test others [getVehicleInfo.do-{\"vin\":\"LSGGA54Y6CH224814 \",\"userId\":36896812,\"queryType\":2}-{\"code\":0,\"data\":{\"vehicleBrandImage\":\"http://img.lianchexing.cn/app/1.png\",\"vehicleBrandName\":\"\\u4e0a\\u6d77\\u901a\\u7528\\u522b\\u514b\",\"vehicleColorList\":[{\"colorId\":1,\"colorName\":\"\\u5e03\\u6717\\u68d5\",\"colorTone\":\"5C4646\"}],\"vehicleModelName\":\"2012\\u6b3e\\u65b0\\u541b\\u5a012.0L\"},\"msg\":\"\\u6210\\u529f\"}]",
+  "time" : {
+    "start" : 1502862557234,
+    "stop" : 1502862557306,
+    "duration" : 72
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 2
+  },
+  "failure" : {
+    "message" : "AssertionError: assert False\n +  where False = compare('{\"code\":10001,\"data\":\"参数vin错误！\",\"msg\":\"输入错误！\"}', '{\"code\":0,\"data\":{\"vehicleBrandImage\":\"http://img.lianchexing.cn/app/1.png\",\"vehicleBrandName\":\"上海通用别克\",\"vehicleColorList\":[{\"colorId\":1,\"colorName\":\"布朗棕\",\"colorTone\":\"5C4646\"}],\"vehicleModelName\":\"2012款新君威2.0L\"},\"msg\":\"成功\"}')",
+    "stackTrace" : "self = <test_onLogin.TestGetVehicle object at 0x0000024B5CA7ADD8>\nlogin = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2NvdW50IjoiMTUwMDA1MTAyNDQiLCJ1c2VySWQiOiIzNjg5NjgxMiIsImlzcyI6ImF1dG8tbGluay1hcHAtc2VydmVyIiwiZXhwIjoxNTAzMDM1NDI5LCJuYmYiOjE1MDI4NjI2Mjl9.YBVNfnCpNz3oYWo-wJMz2TaWWUiw-osWsKeVeNX6SfU'\nurl = 'getVehicleInfo.do'\nparam = '{\"vin\":\"LSGGA54Y6CH224814 \",\"userId\":36896812,\"queryType\":2}'\nexpected = '{\"code\":0,\"data\":{\"vehicleBrandImage\":\"http://img.lianchexing.cn/app/1.png\",\"vehicleBrandName\":\"上海通用别克\",\"vehicleColorList\":[{\"colorId\":1,\"colorName\":\"布朗棕\",\"colorTone\":\"5C4646\"}],\"vehicleModelName\":\"2012款新君威2.0L\"},\"msg\":\"成功\"}'\n\n    @pytest.mark.parametrize(\"url,param,expected\", general_case(\"查询车辆\", data))\n    @allure.feature('查询车辆测试')\n    def test_others(self, login,url, param, expected):\n        newPara = general_arg(constArg, eval(param))\n        r = sendRequest(newPara, (path + url).strip(),login)\n>       assert compare(r[0], expected)\nE       assert False\nE        +  where False = compare('{\"code\":10001,\"data\":\"参数vin错误！\",\"msg\":\"输入错误！\"}', '{\"code\":0,\"data\":{\"vehicleBrandImage\":\"http://img.lianchexing.cn/app/1.png\",\"vehicleBrandName\":\"上海通用别克\",\"vehicleColorList\":[{\"colorId\":1,\"colorName\":\"布朗棕\",\"colorTone\":\"5C4646\"}],\"vehicleModelName\":\"2012款新君威2.0L\"},\"msg\":\"成功\"}')\n\ntest_onLogin.py:51: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "b62c824c80aef466",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ {
+    "name" : "生成参数",
+    "title" : "生成参数",
+    "time" : {
+      "start" : 1502862557234,
+      "stop" : 1502862557234,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "对比结果",
+    "title" : "对比结果",
+    "time" : {
+      "start" : 1502862557302,
+      "stop" : 1502862557302,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "查询车辆",
+    "url" : "查询车辆"
+  } ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "thread",
+    "value" : "11976-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "feature",
+    "value" : "查询车辆测试"
+  }, {
+    "name" : "testId",
+    "value" : "查询车辆"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

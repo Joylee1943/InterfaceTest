@@ -1,0 +1,47 @@
+{
+  "uid" : "6528f14aa5617855",
+  "name" : "Testlogin.test_onLogin[param1-expected1]",
+  "title" : "Test on login [param1-expected1]",
+  "time" : {
+    "start" : 1502436691239,
+    "stop" : 1502436691253,
+    "duration" : 14
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "AssertionError: assert {'code': 1000...msg': '输入错误！'} == {'code': 11004...msg': '密码错误！'}\n  Differing items:\n  {'data': '参数password错误！'} != {'data': ''}\n  {'code': 10001} != {'code': 11004}\n  {'msg': '输入错误！'} != {'msg': '密码错误！'}\n  Full diff:\n  - {'code': 10001, 'data': '参数password错误！', 'msg': '输入错误！'}\n  ?             ^^           -------------           ^^\n  + {'code': 11004, 'data': '', 'msg': '密码错误！'}\n  ?          +   ^                      ^^",
+    "stackTrace" : "self = <test_GetVehicleComputer.Testlogin object at 0x0000024AB2E882B0>\nparam = {'account': '13701837591', 'password': ''}\nexpected = {'code': 11004, 'data': '', 'msg': '密码错误！'}\n\n    @pytest.mark.parametrize(\"param,expected\",login_data)\n    def test_onLogin(self,param,expected):\n        r = sendRequest(param,(path+url).strip())\n        result=r[0]\n>       assert result==expected\nE       AssertionError: assert {'code': 1000...msg': '输入错误！'} == {'code': 11004...msg': '密码错误！'}\nE         Differing items:\nE         {'data': '参数password错误！'} != {'data': ''}\nE         {'code': 10001} != {'code': 11004}\nE         {'msg': '输入错误！'} != {'msg': '密码错误！'}\nE         Full diff:\nE         - {'code': 10001, 'data': '参数password错误！', 'msg': '输入错误！'}\nE         ?             ^^           -------------           ^^\nE         + {'code': 11004, 'data': '', 'msg': '密码错误！'}\nE         ?          +   ^                      ^^\n\ntest_GetVehicleComputer.py:19: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "4cac98c858e56470",
+    "name" : "test_GetVehicleComputer",
+    "title" : "Test get vehicle computer"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_GetVehicleComputer"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "18204-MainThread"
+  } ],
+  "parameters" : [ ]
+}

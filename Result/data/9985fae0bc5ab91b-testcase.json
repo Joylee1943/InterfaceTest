@@ -1,0 +1,83 @@
+{
+  "uid" : "9985fae0bc5ab91b",
+  "name" : "TestGetVehicle.test_others[getVehicleInfo.do-{\"vin\":\"11111111111111111\",\"userId\":36896812,\"queryType\":2}-{\"code\":16002,\"data\":\"\",\"msg\":\"\\u8f66\\u8f86\\u4fe1\\u606f\\u672a\\u627e\\u5230\\uff01\"}]",
+  "title" : "Test others [getVehicleInfo.do-{\"vin\":\"11111111111111111\",\"userId\":36896812,\"queryType\":2}-{\"code\":16002,\"data\":\"\",\"msg\":\"\\u8f66\\u8f86\\u4fe1\\u606f\\u672a\\u627e\\u5230\\uff01\"}]",
+  "time" : {
+    "start" : 1502862556944,
+    "stop" : 1502862557022,
+    "duration" : 78
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 2
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "b62c824c80aef466",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ {
+    "name" : "生成参数",
+    "title" : "生成参数",
+    "time" : {
+      "start" : 1502862556945,
+      "stop" : 1502862556945,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "对比结果",
+    "title" : "对比结果",
+    "time" : {
+      "start" : 1502862557022,
+      "stop" : 1502862557022,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ {
+    "name" : "查询车辆",
+    "url" : "查询车辆"
+  } ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "thread",
+    "value" : "11976-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "feature",
+    "value" : "查询车辆测试"
+  }, {
+    "name" : "testId",
+    "value" : "查询车辆"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

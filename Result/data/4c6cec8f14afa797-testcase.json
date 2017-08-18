@@ -1,0 +1,47 @@
+{
+  "uid" : "4c6cec8f14afa797",
+  "name" : "Testlogin.test_onLogin[param1-expected1]",
+  "title" : "Test on login [param1-expected1]",
+  "time" : {
+    "start" : 1502437730422,
+    "stop" : 1502437730597,
+    "duration" : 175
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "AssertionError: assert b'{\"code\":110...xe5\\x9c\\xa8\"}' == {'code': 11004...msg': '密码错误！'}\n  Full diff:\n  + {'code': 11004, 'data': '', 'msg': '密码错误！'}\n  - (b'{\"code\":11003,\"data\":\"\",\"msg\":\"\\xe7\\x94\\xa8\\xe6\\x88\\xb7\\xe4\\xb8\\x8d'\n  -  b'\\xe5\\xad\\x98\\xe5\\x9c\\xa8\"}')",
+    "stackTrace" : "self = <test_onLogin.Testlogin object at 0x0000024069076EF0>\nparam = {'account': '13701837591', 'password': 'd41d8cd98f00b204e9800998ecf8427e'}\nexpected = {'code': 11004, 'data': '', 'msg': '密码错误！'}\n\n    @pytest.mark.parametrize(\"param,expected\",login_data)\n    def test_onLogin(self,param,expected):\n        newPara=dict(constArg,**param)\n        newPara[\"sign\"]=get_sign(newPara)\n        r = sendRequest(newPara,(path+url).strip())\n        result=r[0]\n>       assert result==expected\nE       assert b'{\"code\":110...xe5\\x9c\\xa8\"}' == {'code': 11004...msg': '密码错误！'}\nE         Full diff:\nE         + {'code': 11004, 'data': '', 'msg': '密码错误！'}\nE         - (b'{\"code\":11003,\"data\":\"\",\"msg\":\"\\xe7\\x94\\xa8\\xe6\\x88\\xb7\\xe4\\xb8\\x8d'\nE         -  b'\\xe5\\xad\\x98\\xe5\\x9c\\xa8\"}')\n\ntest_onLogin.py:25: AssertionError"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "FAILED",
+  "suite" : {
+    "uid" : "66f6036d0aefbd9b",
+    "name" : "test_onLogin",
+    "title" : "Test on login"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_onLogin"
+  }, {
+    "name" : "thread",
+    "value" : "18048-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QF1GK4S"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

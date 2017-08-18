@@ -1,0 +1,14 @@
+{
+  "testCases" : [ {
+    "uid" : "4ce27d4840bc5826",
+    "name" : "Testlogin.test_login[userLoginV3-{\"mobileNumber\":\"13701837591 \",\"password\":\"a123456\"}-{'code': 0, 'data': {'mobileNumber': '18501604617', 'userId': 33}, 'msg': '\\u6210\\u529f'}]",
+    "title" : "Test login [userLoginV3-{\"mobileNumber\":\"13701837591 \",\"password\":\"a123456\"}-{'code': 0, 'data': {'mobileNumber': '18501604617', 'userId': 33}, 'msg': '\\u6210\\u529f'}]",
+    "time" : {
+      "start" : 1502964684569,
+      "stop" : 1502964684946,
+      "duration" : 377
+    },
+    "severity" : "NORMAL",
+    "status" : "FAILED"
+  } ]
+}

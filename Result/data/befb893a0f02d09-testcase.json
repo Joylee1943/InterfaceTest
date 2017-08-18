@@ -1,0 +1,41 @@
+{
+  "uid" : "befb893a0f02d09",
+  "name" : "test_onLogin",
+  "title" : "Test on login",
+  "time" : {
+    "start" : 1502439761354,
+    "stop" : 1502439761354,
+    "duration" : 0
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : "failed",
+    "stackTrace" : "test_onLogin.py:18: in <module>\n    class Testlogin:\ntest_onLogin.py:27: in Testlogin\n    data=get_file_data('./Data/test1.xlsx')['sheet1']\nE   KeyError: 'sheet1'"
+  },
+  "description" : {
+    "value" : "This is the tests collection phase. Failures are modules that failed to collect.",
+    "type" : "TEXT"
+  },
+  "severity" : "NORMAL",
+  "status" : "BROKEN",
+  "suite" : {
+    "uid" : "15418def8f14340c",
+    "name" : "test_collection_phase",
+    "title" : "Collection phase"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-title",
+    "value" : "Collection phase"
+  }, {
+    "name" : "suite-name",
+    "value" : "test_collection_phase"
+  } ],
+  "parameters" : [ ]
+}
